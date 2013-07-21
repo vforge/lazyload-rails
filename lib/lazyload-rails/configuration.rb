@@ -11,8 +11,7 @@ module Lazyload
     class Configuration
 
       # The placeholder image to put into the img src attribute
-      # (default: 1×1 pixel grey gif at
-      # "http://www.appelsiini.net/projects/lazyload/img/grey.gif").
+      # (default: 1×1 pixel transparent gif.
       def placeholder
         @placeholder
       end
@@ -22,7 +21,10 @@ module Lazyload
 
       # Set default settings
       def initialize
-        @placeholder = "http://www.appelsiini.net/projects/lazyload/img/grey.gif"
+        # transparent: data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7
+        # black: data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=
+        
+        @placeholder = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
       end
     end
   end

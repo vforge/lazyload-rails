@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency "nokogiri", "~> 1.5"
   gem.add_development_dependency "actionpack", ">= 3.1"
 
-  gem.author = "Javier Saldana"
-  gem.email  = "javier@tractical.com"
-  gem.homepage = "https://github.com/jassa/lazyload-rails"
+  gem.author = "Bartosz Bentkowski"
+  gem.email  = "bartosz.bentkowski@gmail.com"
+  gem.homepage = "https://github.com/vforge/lazyload-rails"
 end

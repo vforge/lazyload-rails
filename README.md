@@ -1,4 +1,4 @@
-## Lazyload-Rails [![Build Status](https://travis-ci.org/jassa/lazyload-rails.png)](https://travis-ci.org/jassa/lazyload-rails)
+## Lazyload-Rails [![Build Status](https://travis-ci.org/vforge/lazyload-rails.png)](https://travis-ci.org/jassa/lazyload-rails)
 
 This project integrates the jQuery Lazy Load Plugin
 for Rails `image_tag` helpers
@@ -23,24 +23,24 @@ html img tags.
 
 ### Example
 
-    <%= image_tag "kittenz.png", alt: "OMG a cat!" %>
+    <%= lazy_image_tag "kittenz.png", alt: "OMG a cat!" %>
 
 Equals:
 
-    <img alt="OMG a cat!" data-original="/images/kittenz.png" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif">
+    <img alt="OMG a cat!" data-original="/images/kittenz.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
 
 ## Install
 
 Add this line to your application's Gemfile:
 
-    gem "lazyload-rails"
+    gem "lazyload-rails", git: "vforge/lazyload-rails"
 
 Download the [jQuery Lazy Load Plugin](https://raw.github.com/tuupola/jquery_lazyload/master/jquery.lazyload.js)
 into your `vendor/assets/javascripts` directory and include it however you prefer.
 
 And in your JavaScript code do:
 
-    $("img").lazyload();
+    $("img[data-original]").lazyload();
 
 Lazy Load can be customized, [see more options](http://www.appelsiini.net/projects/lazyload)
 
@@ -48,17 +48,12 @@ Lazy Load can be customized, [see more options](http://www.appelsiini.net/projec
 
 ## Configuration
 
-By default, a 1x1 grey gif is used as placeholder (from [http://appelsiini.net/projects/lazyload/img/grey.gif](http://www.appelsiini.net/projects/lazyload/img/grey.gif)). This can be easily customized:
+By default, a 1x1 transparent gif is used as placeholder. This can be easily customized:
 
     # config/initializers/lazyload.rb
     Lazyload::Rails.configure do |config|
       config.placeholder = "/public/img/grey.gif"
     end
-
-## FAQ
-
-* *Q: How can I use the old `image_tag` method?*
-* R: Try with `x_image_tag`
 
 ## License
 

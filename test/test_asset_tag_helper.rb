@@ -38,7 +38,7 @@ class AssetTagHelperTest < ActionView::TestCase
     Lazyload::Rails.reset
 
     expected = '<img alt="Foo" height="150"' +
-      ' src="http://www.appelsiini.net/projects/lazyload/img/grey.gif"' +
+      ' src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"' +
       ' width="100" data-original="/images/foo.png">'
 
     assert_equal expected, image_tag("foo.png", size: "100x150")
