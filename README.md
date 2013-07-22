@@ -1,4 +1,4 @@
-## Lazyload-Rails [![Build Status](https://travis-ci.org/vforge/lazyload-rails.png)](https://travis-ci.org/jassa/lazyload-rails)
+## Lazyload-Rails [![Build Status](https://travis-ci.org/vforge/lazyload-rails.png)](https://travis-ci.org/vforge/lazyload-rails)
 
 This project integrates the jQuery Lazy Load Plugin
 for Rails `image_tag` helpers
